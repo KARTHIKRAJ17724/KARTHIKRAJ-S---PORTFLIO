@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Karthikraj S</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .project-header {
+            background-color: var(--dark-blue);
+            color: var(--white-color);
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+        
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .education-details {
+            padding: 60px 0;
+        }
+        
+        .education-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-content {
+            position: relative;
+            width: calc(50% - 40px);
+            padding: 30px;
+            background-color: var(--white-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            left: calc(50% + 40px);
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--white-color);
+            transform: rotate(45deg);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -10px;
+        }
+        
+        .timeline-date {
+            position: absolute;
+            top: 20px;
+            width: 80px;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-radius: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-date {
+            right: -120px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-date {
+            left: -120px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            background-color: rgba(74, 99, 231, 0.1);
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .timeline-content p {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            background: var(--primary-color);
+            color: var(--white-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: var(--dark-blue);
+            color: var(--white-color);
+            transform: translateY(-3px);
+        }
+        
+        .back-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .education-timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 80px);
+                left: 80px !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -10px;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+            
+            .timeline-date {
+                top: -30px;
+                left: 0 !important;
+                right: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="project-header">
+        <div class="container">
+            <h1><i class="fas fa-graduation-cap" style="margin-right: 15px;"></i> My Education</h1>
+            <p>Academic journey and qualifications</p>
+        </div>
+    </header>
+
+    <section class="education-details">
+        <div class="container">
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Dhanalakshmi Srinivasan Engineering College</h3>
+                        <h4>B.E Computer Science</h4>
+                        <p>2021 - 2025</p>
+                        <p>CGPA: 8.0</p>
+                        <p>Studying computer science engineering with focus on programming, algorithms, and software development.</p>
+                    </div>
+                    <div class="timeline-date">2021-2025</div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Zamindar Higher Secondary School</h3>
+                        <h4>HSC Bio-Cs</h4>
+                        <p>2020 - 2021</p>
+                        <p>Percentage: 81%</p>
+                        <p>Completed higher secondary education with focus on Biology and Computer Science.</p>
+                    </div>
+                    <div class="timeline-date">2020-2021</div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Zamindar Higher Secondary School</h3>
+                        <h4>SSC General</h4>
+                        <p>2018 - 2019</p>
+                        <p>Percentage: 71%</p>
+                        <p>Completed secondary school education with a well-rounded curriculum.</p>
+                    </div>
+                    <div class="timeline-date">2018-2019</div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+            
+            <div class="back-container">
+                <a href="index.html#education" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <h2>KR</h2>
+                </div>
+                <p>&copy; 2025 Karthikraj S. All rights reserved.</p>
+                <div class="back-to-top">
+                    <a href="#top">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
